@@ -34,5 +34,5 @@ export const DATABASE = {
  * @property {number} PORT - The port on which the WebSocket server runs.
  */
 export const WEBSOCKET = {
-  PORT: process.env.WEBSOCKET_PORT || 5000,
+  PORT: process.env.PORT || 5000,
 };
