@@ -1,0 +1,34 @@
+{
+  "name": "ws",
+  "version": "1.0.0",
+  "description": "WebSocket server for Waifu.it Website and Services",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "websocket",
+    "server",
+    "real-time",
+    "Waifu.it",
+    "anime",
+    "ws"
+  ],
+  "author": "Aeryk",
+  "license": "AGPLv3",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "mongodb": "^6.13.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0",
+    "eslint": "^8.56.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
