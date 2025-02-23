@@ -3,6 +3,7 @@ import { WebSocketServer } from "ws";
 import { WEBSOCKET } from "./config.js";
 import { connectToMongoDB } from "./lib/database.js";
 import { handleConnection } from "./core/ws.js";
+import { logger } from "./lib/logger.js";
 
 /**
  * Creates an HTTP server that responds with "Upgrade Required" for non-WebSocket requests.
@@ -41,5 +42,5 @@ connectToMongoDB().catch(console.error);
  * @listens http.Server#listening
  */
 server.listen(WEBSOCKET.PORT, "0.0.0.0", () => {
-  console.log("WebSocket server running on ws://0.0.0.0:5000");
+  logger.success("WebSocket server running on ws://0.0.0.0:5000");
 });

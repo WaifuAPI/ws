@@ -1,3 +1,5 @@
+import { logger } from "../lib/logger.js";
+
 /**
  * A map to store connected WebSocket clients by user ID.
  * @constant
@@ -17,7 +19,7 @@ export const handleConnection = (ws, req) => {
   ).searchParams.get("uid");
 
   if (userId) {
-    console.log(`User ${userId} connected`);
+    logger.info(`User ${userId} connected`);
     clients.set(userId, ws);
   }
 
@@ -25,6 +27,6 @@ export const handleConnection = (ws, req) => {
 
   ws.on("close", () => {
     if (userId) clients.delete(userId);
-    console.log(`User ${userId} disconnected`);
+    logger.warn(`User ${userId} disconnected`);
   });
 };

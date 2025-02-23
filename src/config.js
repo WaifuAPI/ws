@@ -35,4 +35,5 @@ export const DATABASE = {
  */
 export const WEBSOCKET = {
   PORT: process.env.PORT || 5000,
+  LOGGER: process.env.DISCORD_WEBHOOK,
 };
