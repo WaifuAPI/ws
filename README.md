@@ -14,7 +14,7 @@ Real-time WebSocket server for **Waifu.it**, enabling seamless communication bet
 ### 1️⃣ Clone the Repository
 
 ```sh
-git clone git@github.com:<your-username>/websocket.git
+git clone git@github.com:WaifuAPI/ws.git
 cd websocket
 ```
 
